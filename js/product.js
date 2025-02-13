@@ -12,7 +12,7 @@ function cardlist(data)
 
 
 function fetdata(){
-    fetch("http://localhost:3000/products")
+    fetch("https://paul-smith-server.onrender.com/products")
     .then(response => response.json())
     .then((data)=>{
       productdata=data
@@ -107,13 +107,13 @@ bags.addEventListener("click",(event)=>{
     let id = event.target.dataset.id
     console.log(id)
 
-    fetch(`http://localhost:3000/products/${id}`)
+    fetch(`https://paul-smith-server.onrender.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
         // post data in cart
 
-        fetch("http://localhost:3000/cartpage", {
+        fetch("https://paul-smith-server.onrender.com/cartpage", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -1,6 +1,6 @@
 function fetchcardata()
 {
-    fetch("http://localhost:3000/cartpage")
+    fetch("https://paul-smith-server.onrender.com/cartpage")
     .then((res)=>res.json())
     .then((data)=>cardlist(data))
     .catch((err)=>console.log(err))
@@ -40,7 +40,7 @@ document.addEventListener("click",(e)=>{
 
 function dataproduct(id)
 {
-  fetch(`http://localhost:3000/cartpage/${id}`,{
+  fetch(`https://paul-smith-server.onrender.com/cartpage/${id}`,{
     method:"DELETE",
   })
   .then((res)=>res.json())
